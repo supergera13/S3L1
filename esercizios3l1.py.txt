@@ -1,0 +1,33 @@
+def perimetro():
+	
+	while True:
+		print("Il programma calcola il perimetro di una figura geometrica\n- Quadrato>>1\n- Rettangolo>>2\n- Cerchio>>3\n- Esci dal programma>>4\n")
+		try:
+			scelta = int(input("Inserisci la tua scelta: "))
+			if scelta == 1:
+				print("Hai scelto il perimetro del Quadrato")
+				lato= int(input("Inserisci il valore del lato quadrato "))
+				print("Il perimetro del Quadrato, avente lato", lato, "e':", lato*4)
+				break
+			elif scelta == 2:
+				print("Hai scelto il perimetro del Rettangolo")
+				base = int(input("Inserisci il valore della base "))
+				altezza = int(input("Inserisci il valore dell'altezza "))
+				print("Il perimetro del Rettangolo, avente base", base, "e altezza", altezza, "e':",base*2 + altezza*2)
+				break
+			elif scelta == 3:
+				print("Hai scelto la circonferenza del Cerchio")
+				raggio= int(input("Inserisci il valore del raggio "))
+				print("La circonferenza del Cerchio, avente raggio", raggio, "e diametro 2", "e':",2*3.14*raggio)
+				break
+			elif scelta == 4:
+				break
+			else: 
+				print("La tua scelta non e' valida")
+				perimetro()
+				
+		except ValueError:
+			print("Input non valido. Inserisci un numero intero.")
+			perimetro()
+		
+perimetro()
